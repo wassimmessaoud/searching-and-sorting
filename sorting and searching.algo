@@ -1,0 +1,27 @@
+PROCEDURE swap(VAR x,y : INTEGER)
+VAR
+    tmp : INTEGER;
+BEGIN
+    tmp := x;
+    x := y;
+    y := tmp;
+END
+ALGORITHM Sorting_and_searching_checkpoint
+VAR
+    tab_sorting: ARRAY_OF INTEGER[i];
+    i,j,n,tmp:=INTEGER;
+
+BEGIN
+    n:=tab_lenght;
+    Read(tab_sorting);
+    WHILE (i<n or j=0) DO
+        j=i;
+        tmp=tab[i];
+        IF (tmp<tab_sorting[j-1]) THEN
+        tab_sorting[j]:= tab_sorting[j-1];
+        j=j-1;
+        END_IF
+    END_WHILE
+    arr[j]=tmp
+    
+END
